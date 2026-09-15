@@ -1,182 +1,115 @@
-<!DOCTYPE html><html lang="en"><head>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- SEO Meta Tags -->
-<title>Prerna Mali | Personal Portfolio</title>
-<meta name="description"
-    content="Personal portfolio of Your Name, showcasing web development skills, projects and contact information.">
-<meta name="keywords"
-    content="portfolio, web developer, HTML5, CSS3, JavaScript, accessibility">
-<meta name="author" content="Your Name">
-<meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Open Graph SEO -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="prerna Mali| Personal Portfolio">
-<meta property="og:description"
-    content="Personal portofolio of Prerna Mali,showcasing web development skills,progects and contact information.">
+    <title>Task Manager</title>
 
-<!-- CSS File -->
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-</head><body><!-- Skip Link for Keyboard Users -->
-<a href="#main-content" class="skip-link">
-    Skip to main content
-</a>
+<body>
 
-<!-- Header -->
-<header class="site-header">
-    <div class="container">
+    <!-- Header -->
+    <header>
+        <nav aria-label="Main Navigation">
+            <h2>Task Manager</h2>
 
-        <!-- Website Logo -->
-        <a href="index.html" class="logo" aria-label="Prerna Mali Home">
-            Prerna Mali
-        </a>
-
-        <!-- Navigation -->
-        <nav aria-label="Primary navigation">
-            <ul class="nav-list">
-                <li>
-                    <a href="index.html" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="projects.html">Projects</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-
-    </div>
-</header>
+    </header>
 
 
-<!-- Main Content -->
-<main id="main-content">
+    <!-- Main Content -->
+    <main>
 
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-heading">
-        <div class="container">
-
-            <h1 id="hero-heading">
-                Hi, I'm Prerna Mali
-            </h1>
+        <section class="hero">
+            <h1>My Task Manager</h1>
 
             <p>
-                I am a web developer who creates modern, responsive and
-                accessible websites.
+                Manage your daily tasks easily with this simple
+                and interactive task management application.
             </p>
-
-            <a href="projects.html" class="button">
-                View My Projects
-            </a>
-
-        </div>
-    </section>
+        </section>
 
 
-    <!-- Featured Projects -->
-    <section aria-labelledby="featured-projects-heading">
-        <div class="container">
+        <!-- Task Manager -->
+        <section class="task-section">
 
-            <h2 id="featured-projects-heading">
-                Featured Projects
-            </h2>
+            <h2>Task Manager</h2>
 
-            <div class="project-grid">
+            <!-- Add Task -->
+            <form id="taskForm">
 
-                <article class="project-card">
-                    <h3>Portfolio Website</h3>
+                <label for="taskInput">Enter Task</label>
 
-                    <p>
-                        A responsive personal portfolio website built using
-                        semantic HTML5, CSS3 and JavaScript.
-                    </p>
+                <div class="task-input-container">
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Enter a task..."
+                        required
+                    >
 
-                    <a href="projects.html#project-one">
-                        View Portfolio Project
-                    </a>
-                </article>
+                    <button type="submit">
+                        Add Task
+                    </button>
+                </div>
+
+            </form>
 
 
-                <article class="project-card">
-                    <h3>Task Manager</h3>
+            <!-- Filters -->
+            <div class="filters">
 
-                    <p>
-                        A simple task management application designed with
-                        accessibility and usability in mind.
-                    </p>
+                <button
+                    class="filter active"
+                    data-filter="all">
+                    All
+                </button>
 
-                    <a href="projects.html#project-two">
-                        View Task Manager Project
-                    </a>
-                </article>
+                <button
+                    class="filter"
+                    data-filter="active">
+                    Active
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="completed">
+                    Completed
+                </button>
 
             </div>
 
-        </div>
-    </section>
+
+            <!-- Tasks -->
+            <div id="taskList"></div>
 
 
-    <!-- Contact Call to Action -->
-    <section class="cta" aria-labelledby="cta-heading">
-        <div class="container">
-
-            <h2 id="cta-heading">
-                Let's Work Together
-            </h2>
-
-            <p>
-                Have a project or idea? Feel free to contact me.
+            <!-- Task Count -->
+            <p id="taskCount">
+                0 tasks remaining
             </p>
 
-            <a href="contact.html" class="button">
-                Contact Me
-            </a>
+        </section>
 
-        </div>
-    </section>
-
-</main>
+    </main>
 
 
-<!-- Footer -->
-<footer class="site-footer">
-    <div class="container">
-
-        <p>
-            &copy; <span id="current-year"></span> Prerna Mali.
-            All rights reserved.
-        </p>
-
-        <nav aria-label="Social media links">
-            <ul class="footer-links">
-
-                <li>
-                    <a href="https://github.com/"
-                        aria-label="Visit my GitHub profile">
-                        GitHub
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.linkedin.com/"
-                        aria-label="Visit my LinkedIn profile">
-                        LinkedIn
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
-
-    </div>
-</footer>
+    <!---Footer -->
+    <footer>
+        <p>&copy; 2026 My Task Manager. All Rights Reserved.</p>
+    </footer>
 
 
-<!-- JavaScript File -->
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
-</body></html>
+</body>
+</html>

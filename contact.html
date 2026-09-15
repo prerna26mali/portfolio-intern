@@ -1,227 +1,94 @@
-<!DOCTYPE html><html lang="en"><head>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- SEO Meta Tags -->
-<title>Contact | Your Name Portfolio</title>
-<meta name="description"
-    content="Contact Your Name for web development projects, collaboration and opportunities.">
-<meta name="keywords"
-    content="contact, web developer, portfolio, web development">
-<meta name="author" content="Your Name">
-<meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- CSS File -->
-<link rel="stylesheet" href="styles.css">
+    <title>Contact</title>
 
-</head><body><!-- Skip Link -->
-<a href="#main-content" class="skip-link">
-    Skip to main content
-</a>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
 
-<!-- Header -->
-<header class="site-header">
-    <div class="container">
+    <header>
+        <nav aria-label="Main Navigation">
 
-        <!-- Logo -->
-        <a href="index.html" class="logo" aria-label="Your Name Home">
-            Your Name
-        </a>
+            <h2>Task Manager</h2>
 
-        <!-- Navigation -->
-        <nav aria-label="Primary navigation">
-            <ul class="nav-list">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="projects.html">Projects</a>
-                </li>
-                <li>
-                    <a href="contact.html" aria-current="page">
-                        Contact
-                    </a>
-                </li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
+
         </nav>
-
-    </div>
-</header>
-
-
-<!-- Main Content -->
-<main id="main-content">
-
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-
-            <h1>Contact Me</h1>
-
-            <p>
-                Have a project or idea? Send me a message.
-            </p>
-
-        </div>
     </header>
 
 
-    <!-- Contact Form Section -->
-    <section aria-labelledby="contact-heading">
-        <div class="container">
+    <main>
 
-            <h2 id="contact-heading">
-                Send a Message
-            </h2>
+        <section class="page-section">
 
-            <p id="form-instructions">
-                Fields marked with <span aria-hidden="true">*</span> are required.
-            </p>
+            <h1>Contact Me</h1>
 
+            <form class="contact-form">
 
-            <!-- Accessible Contact Form -->
-            <form id="contact-form" action="#" method="post">
+                <label for="name">
+                    Name
+                </label>
 
-                <!-- Name -->
-                <div class="form-field">
-
-                    <label for="name">
-                        Full Name
-                        <span aria-hidden="true">*</span>
-                    </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        autocomplete="name"
-                        required
-                        aria-describedby="form-instructions"
-                    >
-
-                </div>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
 
 
-                <!-- Email -->
-                <div class="form-field">
+                <label for="email">
+                    Email
+                </label>
 
-                    <label for="email">
-                        Email Address
-                        <span aria-hidden="true">*</span>
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        autocomplete="email"
-                        required
-                        aria-describedby="email-help"
-                    >
-
-                    <p id="email-help">
-                        Enter a valid email address where you can be contacted.
-                    </p>
-
-                </div>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
 
 
-                <!-- Subject -->
-                <div class="form-field">
+                <label for="message">
+                    Message
+                </label>
 
-                    <label for="subject">
-                        Subject
-                    </label>
-
-                    <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        autocomplete="off"
-                    >
-
-                </div>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Enter your message"
+                    required
+                ></textarea>
 
 
-                <!-- Message -->
-                <div class="form-field">
-
-                    <label for="message">
-                        Message
-                        <span aria-hidden="true">*</span>
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="8"
-                        required
-                        aria-describedby="message-help"
-                    ></textarea>
-
-                    <p id="message-help">
-                        Please provide details about your message.
-                    </p>
-
-                </div>
-
-
-                <!-- Accessible Status Message -->
-                <div
-                    id="form-status"
-                    role="status"
-                    aria-live="polite"
-                    aria-atomic="true"
-                ></div>
-
-
-                <!-- Submit Button -->
                 <button type="submit">
                     Send Message
                 </button>
 
             </form>
 
-        </div>
-    </section>
+        </section>
 
-</main>
-
-
-<!-- Footer -->
-<footer class="site-footer">
-    <div class="container">
-
-        <p>
-            &copy; <span id="current-year"></span> Your Name.
-            All rights reserved.
-        </p>
-
-        <nav aria-label="Footer navigation">
-            <ul class="footer-links">
-
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-
-                <li>
-                    <a href="projects.html">Projects</a>
-                </li>
-
-            </ul>
-        </nav>
-
-    </div>
-</footer>
+    </main>
 
 
-<!-- JavaScript File -->
-<script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 My Task Manager. All Rights Reserved.</p>
+    </footer>
 
-</body></html>
+</body>
+</html>
+```
